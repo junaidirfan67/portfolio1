@@ -1,5 +1,5 @@
 /* ==========================================================================
-   JUNAID IRFAN PORTFOLIO - CLASSIC AMBIENT BACKGROUND
+   JUNAID IRFAN PORTFOLIO - DEEP NAVY AMBIENT BACKGROUND
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.size = Math.random() * 1.8 + 0.8;
       this.speedX = (Math.random() - 0.5) * 0.4;
       this.speedY = (Math.random() - 0.5) * 0.4;
-      this.alpha = Math.random() * 0.4 + 0.15;
+      this.alpha = Math.random() * 0.45 + 0.15;
     }
 
     update() {
@@ -62,35 +62,35 @@ document.addEventListener('DOMContentLoaded', () => {
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(245, 158, 11, ${this.alpha})`;
-      ctx.shadowBlur = 6;
-      ctx.shadowColor = 'rgba(245, 158, 11, 0.2)';
+      ctx.fillStyle = `rgba(96, 165, 250, ${this.alpha})`;
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = 'rgba(59, 130, 246, 0.3)';
       ctx.fill();
     }
   }
 
   function initParticles() {
     particles = [];
-    const count = Math.min(Math.floor((width * height) / 16000), 60);
+    const count = Math.min(Math.floor((width * height) / 15000), 65);
     for (let i = 0; i < count; i++) {
       particles.push(new Particle());
     }
   }
 
   function connectParticles() {
-    const maxDist = 120;
+    const maxDist = 125;
     for (let a = 0; a < particles.length; a++) {
       for (let b = a + 1; b < particles.length; b++) {
         let dx = particles[a].x - particles[b].x;
         let dy = particles[a].y - particles[b].y;
         let dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < maxDist) {
-          let opacity = (1 - dist / maxDist) * 0.12;
+          let opacity = (1 - dist / maxDist) * 0.15;
           ctx.beginPath();
           ctx.moveTo(particles[a].x, particles[a].y);
           ctx.lineTo(particles[b].x, particles[b].y);
-          ctx.strokeStyle = `rgba(245, 158, 11, ${opacity})`;
-          ctx.lineWidth = 0.6;
+          ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
+          ctx.lineWidth = 0.7;
           ctx.stroke();
         }
       }

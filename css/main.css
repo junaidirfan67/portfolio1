@@ -1,40 +1,39 @@
 /* ==========================================================================
-   JUNAID IRFAN PORTFOLIO - CLASSIC & EXECUTIVE DESIGN SYSTEM
+   JUNAID IRFAN PORTFOLIO - NAVY BLUE CLASSIC EXECUTIVE DESIGN SYSTEM
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Google Fonts Import: Playfair Display (Classic Headings) + Plus Jakarta Sans
+   Google Fonts Import: Playfair Display + Plus Jakarta Sans + Fira Code
    -------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 
 /* --------------------------------------------------------------------------
-   CSS Custom Properties (Classic Luxury / Executive Palette)
+   CSS Custom Properties (Classic Deep Navy Blue Palette)
    -------------------------------------------------------------------------- */
 :root {
-  /* Classic Midnight Slate Palette */
-  --bg-dark: #0a0d16;
-  --bg-dark-surface: #101524;
-  --bg-card: rgba(16, 21, 36, 0.9);
-  --bg-card-hover: rgba(22, 29, 50, 0.95);
-  --bg-header: rgba(10, 13, 22, 0.92);
-  --border-classic: rgba(217, 119, 6, 0.22);
+  /* Classic Deep Navy Blue Palette */
+  --bg-dark: #070c1e;              /* Deep Midnight Navy */
+  --bg-dark-surface: #0e1733;      /* Dark Navy Surface */
+  --bg-card: rgba(16, 26, 56, 0.9);/* Classic Navy Glass Card */
+  --bg-card-hover: rgba(22, 36, 76, 0.95);
+  --bg-header: rgba(7, 12, 30, 0.92);
+
+  /* Navy Borders & Accents */
+  --border-classic: rgba(59, 130, 246, 0.28);
   --border-classic-subtle: rgba(255, 255, 255, 0.08);
-  --border-classic-hover: rgba(245, 158, 11, 0.45);
+  --border-classic-hover: rgba(96, 165, 250, 0.5);
 
-  /* Gold & Champagne Primary Accents */
-  --gold-primary: #d97706;
-  --gold-light: #f59e0b;
-  --gold-amber: #fbbf24;
-  --gold-glow: rgba(245, 158, 11, 0.18);
-
-  /* Sapphire & Steel Accents */
-  --sapphire-primary: #2563eb;
-  --sapphire-dark: #1e3a8a;
+  /* Primary Sapphire / Royal Navy Accents */
+  --navy-primary: #1e40af;
+  --navy-light: #3b82f6;
+  --navy-ice: #93c5fd;
+  --navy-sky: #60a5fa;
+  --navy-glow: rgba(59, 130, 246, 0.25);
 
   /* Gradients */
-  --gradient-gold: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-light) 50%, var(--gold-amber) 100%);
-  --gradient-sapphire: linear-gradient(135deg, var(--sapphire-primary) 0%, var(--sapphire-dark) 100%);
-  --gradient-text: linear-gradient(135deg, #ffffff 0%, #fef3c7 40%, var(--gold-amber) 100%);
+  --gradient-navy: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
+  --gradient-gold-accent: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --gradient-text: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #93c5fd 100%);
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -60,8 +59,8 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-classic: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
-  --shadow-gold-glow: 0 0 25px rgba(245, 158, 11, 0.2);
+  --shadow-classic: 0 10px 30px -10px rgba(0, 0, 0, 0.65);
+  --shadow-navy-glow: 0 0 25px rgba(59, 130, 246, 0.25);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -85,7 +84,7 @@ html {
 
 body {
   background-color: var(--bg-dark);
-  color: #a0aec0;
+  color: #94a3b8;
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: 1.7;
@@ -172,9 +171,9 @@ ul { list-style: none; }
   gap: 0.5rem;
   padding: 0.35rem 1.1rem;
   border-radius: var(--radius-full);
-  background: rgba(245, 158, 11, 0.08);
+  background: rgba(59, 130, 246, 0.1);
   border: 1px solid var(--border-classic);
-  color: var(--gold-light);
+  color: var(--navy-sky);
   font-size: var(--text-xs);
   font-family: var(--font-mono);
   text-transform: uppercase;
@@ -189,7 +188,7 @@ ul { list-style: none; }
 }
 
 .gradient-text {
-  background: var(--gradient-gold);
+  background: var(--gradient-navy);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -203,8 +202,8 @@ ul { list-style: none; }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
 ::-webkit-scrollbar-thumb {
-  background: rgba(245, 158, 11, 0.25);
+  background: rgba(59, 130, 246, 0.3);
   border-radius: var(--radius-full);
   border: 2px solid var(--bg-dark);
 }
-::-webkit-scrollbar-thumb:hover { background: var(--gold-light); }
+::-webkit-scrollbar-thumb:hover { background: var(--navy-light); }
