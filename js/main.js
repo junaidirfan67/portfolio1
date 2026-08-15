@@ -1,18 +1,18 @@
 /* ==========================================================================
-   DEVELOPER PORTFOLIO - MAIN INTERACTIVITY & NAVIGATION
+   JUNAID IRFAN PORTFOLIO - MAIN INTERACTIVITY & NAVIGATION
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
-  // 1. Dynamic Typewriter Effect in Hero
+  // 1. Executive Dynamic Typewriter Effect in Hero
   // --------------------------------------------------------------------------
   const typingTarget = document.getElementById('typing-target');
   if (typingTarget) {
     const titles = [
-      'Full-Stack Developer',
-      'Creative UI/UX Engineer',
-      'AI & Cloud Architect',
-      'Open Source Contributor'
+      'Full-Stack Software Engineer',
+      'Senior Web Solutions Architect',
+      'UI/UX & Frontend Developer',
+      'Tech Lead & Creative Coder'
     ];
     let titleIdx = 0;
     let charIdx = 0;
@@ -25,20 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isDeleting) {
         typingTarget.textContent = currentTitle.substring(0, charIdx - 1);
         charIdx--;
-        typeSpeed = 50;
+        typeSpeed = 45;
       } else {
         typingTarget.textContent = currentTitle.substring(0, charIdx + 1);
         charIdx++;
-        typeSpeed = 120;
+        typeSpeed = 110;
       }
 
       if (!isDeleting && charIdx === currentTitle.length) {
         isDeleting = true;
-        typeSpeed = 2000; // Pause at full word
+        typeSpeed = 2200; // Pause at full word
       } else if (isDeleting && charIdx === 0) {
         isDeleting = false;
         titleIdx = (titleIdx + 1) % titles.length;
-        typeSpeed = 400; // Pause before new word
+        typeSpeed = 400; // Pause before next word
       }
 
       setTimeout(typeEffect, typeSpeed);
@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleScroll() {
     const scrollY = window.scrollY;
 
-    // Header glass background change
     if (header) {
       if (scrollY > 50) {
         header.classList.add('scrolled');
@@ -67,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Back to top button visibility
     if (backToTopBtn) {
       if (scrollY > 400) {
         backToTopBtn.classList.add('visible');
@@ -76,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Active Section Link Observer
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 120;
@@ -95,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', handleScroll);
 
-  // Back to Top Click
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -114,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileNav.classList.toggle('active');
     });
 
-    // Close menu when clicking link
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
       link.addEventListener('click', () => {
         mobileToggle.classList.remove('active');
@@ -153,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = parseInt(counter.dataset.target);
       const suffix = counter.dataset.suffix || '';
       let count = 0;
-      const duration = 1500;
+      const duration = 1600;
       const stepTime = Math.abs(Math.floor(duration / target));
 
       const timer = setInterval(() => {
@@ -168,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 6. Scroll Reveal Observer & Skill Bars Fill Animation
+  // 6. Scroll Reveal Observer
   // --------------------------------------------------------------------------
   const observerOptions = {
     threshold: 0.15,
@@ -180,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
 
-        // Check if skills section or skill card to fill progress bars
         if (entry.target.classList.contains('skill-card')) {
           const fill = entry.target.querySelector('.progress-bar-fill');
           if (fill) {
@@ -188,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
 
-        // Trigger stat counters if stats section visible
         if (entry.target.id === 'stats-container' && !countersTriggered) {
           countersTriggered = true;
           animateCounters();
