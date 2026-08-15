@@ -1,19 +1,76 @@
 /* ==========================================================================
-   DEVELOPER PORTFOLIO - PROJECTS DATA & MODAL INTERACTIVITY
+   JUNAID IRFAN PORTFOLIO - PROJECTS DATA & MODAL INTERACTIVITY
    ========================================================================== */
 
 const PROJECTS_DATA = [
   {
+    id: 'mobile-app-fintech',
+    title: 'Nova Mobile - iOS & Android Financial App',
+    category: 'mobile-app',
+    categoryLabel: 'Mobile App Development',
+    tagline: 'Cross-platform mobile wallet and investment app built for iOS and Android.',
+    description: 'Nova Mobile is a high-performance cross-platform mobile application developed with React Native and native iOS/Android modules. It provides biometric security, real-time push notifications, offline transaction caching, and interactive portfolio analytics.',
+    thumbnail: 'assets/project-mobile-app.jpg',
+    tags: ['React Native', 'iOS / Android', 'TypeScript', 'Redux Toolkit', 'Firebase', 'REST API'],
+    liveUrl: 'https://example.com/demo-mobile',
+    githubUrl: 'https://github.com/junaidirfan67/nova-mobile-app',
+    features: [
+      'Native iOS (Swift) & Android (Kotlin) bridge integration',
+      'Biometric authentication (FaceID & Fingerprint scanner)',
+      'Offline data synchronization using AsyncStore & SQLite',
+      'Custom animated chart visualizers for mobile viewports'
+    ],
+    stats: { downloads: '50,000+', rating: '4.8/5', crashRate: '< 0.01%' }
+  },
+  {
+    id: 'django-python-api',
+    title: 'PulseEngine - Django REST & SEO Analytics',
+    category: 'python-django',
+    categoryLabel: 'Python & Django Architecture',
+    tagline: 'Scalable Python Django backend with automated SEO keyword & rank tracker.',
+    description: 'PulseEngine is an enterprise backend microservice built with Python 3 and Django REST Framework (DRF). It automates web scraping, tracks Google search engine rankings, performs keyword competition analysis, and serves high-throughput APIs for digital marketing teams.',
+    thumbnail: 'assets/project-ai-dashboard.jpg',
+    tags: ['Python 3', 'Django REST Framework', 'PostgreSQL', 'Celery / Redis', 'BeautifulSoup', 'Docker'],
+    liveUrl: 'https://example.com/demo-django-seo',
+    githubUrl: 'https://github.com/junaidirfan67/django-seo-analytics',
+    features: [
+      'High-speed async scraping pipeline with Python & Celery worker tasks',
+      'Automated SEO audit reporting engine with PDF export',
+      'JWT authenticated RESTful API endpoints with Swagger docs',
+      'Optimized PostgreSQL ORM database queries handling 1M+ daily rows'
+    ],
+    stats: { keywordsTracked: '100K+', apiLatency: '42ms', uptime: '99.9%' }
+  },
+  {
+    id: 'marketing-growth-platform',
+    title: 'GrowthScale - Digital Marketing & Campaign Suite',
+    category: 'digital-marketing',
+    categoryLabel: 'Digital Marketing & Growth',
+    tagline: 'Conversion rate optimization and automated multi-channel campaign manager.',
+    description: 'GrowthScale integrates Google Analytics 4, Facebook Ads API, and custom SEO tracking algorithms into a unified digital marketing dashboard to maximize campaign ROI and user acquisition.',
+    thumbnail: 'assets/project-saas-platform.jpg',
+    tags: ['Digital Marketing', 'SEO Optimization', 'Google Analytics 4', 'Conversion Rate Optimization', 'Python'],
+    liveUrl: 'https://example.com/demo-growthscale',
+    githubUrl: 'https://github.com/junaidirfan67/digital-marketing-suite',
+    features: [
+      'Multi-channel ad campaign attribution & ROI calculator',
+      'Automated technical SEO site audit & broken link crawler',
+      'Dynamic A/B testing lander integration for higher conversions',
+      'Real-time traffic anomaly detection and email alert triggers'
+    ],
+    stats: { roiBoost: '+45%', trafficIncrease: '3x', leadsGenerated: '25,000+' }
+  },
+  {
     id: 'ai-analytics-dashboard',
     title: 'NexusAI - Intelligence Dashboard',
-    category: 'ai-ml',
-    categoryLabel: 'AI / Machine Learning',
+    category: 'web-app',
+    categoryLabel: 'Web Application / AI',
     tagline: 'Real-time predictive analytics dashboard with neural graph visualization.',
     description: 'NexusAI is an enterprise-grade AI analytics platform designed to monitor real-time data streams, detect anomalies using deep learning models, and generate predictive business metrics with sub-second latency.',
     thumbnail: 'assets/project-ai-dashboard.jpg',
     tags: ['React', 'TypeScript', 'Python FastAPI', 'TensorFlow', 'Tailwind', 'Chart.js'],
     liveUrl: 'https://example.com/demo-ai',
-    githubUrl: 'https://github.com/example/nexus-ai-dashboard',
+    githubUrl: 'https://github.com/junaidirfan67/nexus-ai-dashboard',
     features: [
       'Real-time WebSocket streaming telemetry visualizer',
       'Custom trained LSTM predictive neural network model integration',
@@ -32,7 +89,7 @@ const PROJECTS_DATA = [
     thumbnail: 'assets/project-ecommerce.jpg',
     tags: ['Next.js', 'Three.js / WebGL', 'Tailwind CSS', 'Stripe API', 'GraphQL'],
     liveUrl: 'https://example.com/demo-aura3d',
-    githubUrl: 'https://github.com/example/aura3d-spatial-commerce',
+    githubUrl: 'https://github.com/junaidirfan67/aura3d-spatial-commerce',
     features: [
       'Interactive 360° product material & texture customization',
       'Augmented Reality (AR) quick-look viewer for mobile web browsers',
@@ -49,9 +106,9 @@ const PROJECTS_DATA = [
     tagline: 'High-frequency financial trading suite with live order book execution.',
     description: 'PulseFX delivers institutional-grade charting tools, automated strategy backtesting algorithms, and multi-exchange order routing inside a high-performance web browser terminal.',
     thumbnail: 'assets/project-crypto-analytics.jpg',
-    tags: ['Vue 3', 'Node.js', 'WebSockets', 'TradingView API', 'Redis'],
+    tags: ['Vue 3', 'Python', 'Node.js', 'WebSockets', 'TradingView API', 'Redis'],
     liveUrl: 'https://example.com/demo-pulsefx',
-    githubUrl: 'https://github.com/example/pulsefx-trading-terminal',
+    githubUrl: 'https://github.com/junaidirfan67/pulsefx-trading-terminal',
     features: [
       'Low-latency WebSocket order book & candlestick depth charts',
       'Custom algorithmic strategy script editor with pine script support',
@@ -59,25 +116,6 @@ const PROJECTS_DATA = [
       'Biometric & 2FA secure authentication login flow'
     ],
     stats: { volume: '$45M+', uptime: '99.99%', tradesProcessed: '1M+' }
-  },
-  {
-    id: 'saas-productivity',
-    title: 'SyncSphere - SaaS Task Management',
-    category: 'saas',
-    categoryLabel: 'SaaS Platform',
-    tagline: 'Collaborative workspace management with automated Kanban workflows.',
-    description: 'SyncSphere helps remote teams streamline product roadmaps, manage task dependencies, track time metrics, and automate recurring engineering workflows with an intuitive drag-and-drop interface.',
-    thumbnail: 'assets/project-saas-platform.jpg',
-    tags: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Docker', 'Zustand'],
-    liveUrl: 'https://example.com/demo-syncsphere',
-    githubUrl: 'https://github.com/example/syncsphere-saas-app',
-    features: [
-      'Fluid drag-and-drop Kanban boards with custom status columns',
-      'Automated GitHub & Jira webhook task syncer',
-      'Real-time collaborative document editing with cursor presence',
-      'Granular team permission roles & SSO enterprise login'
-    ],
-    stats: { teams: '450+', tasksCompleted: '250K+', rating: '4.9/5' }
   }
 ];
 
@@ -89,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!projectsGrid) return;
 
-  // Render Projects Grid
   function renderProjects(filter = 'all') {
     projectsGrid.innerHTML = '';
 
@@ -99,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filtered.forEach((project, idx) => {
       const card = document.createElement('div');
-      card.className = `project-card reveal delay-${(idx + 1) * 100}`;
+      card.className = `project-card reveal delay-${(idx % 4 + 1) * 100}`;
       card.dataset.id = project.id;
 
       const tagsHtml = project.tags.map(t => `<span class="badge">${t}</span>`).join('');
@@ -127,10 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
       projectsGrid.appendChild(card);
     });
 
-    // Re-trigger scroll reveal observer if active
     if (window.refreshObserver) window.refreshObserver();
 
-    // Bind event listener to View Details buttons
     document.querySelectorAll('.view-details-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -138,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Also click anywhere on card to open
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('click', () => {
         openProjectModal(card.dataset.id);
@@ -146,7 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Filter Buttons Logic
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -155,7 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Modal Open Handler
   function openProjectModal(id) {
     const project = PROJECTS_DATA.find(p => p.id === id);
     if (!project || !modalBackdrop) return;
@@ -169,24 +201,24 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="${project.thumbnail}" alt="${project.title}" />
       </div>
       <div class="section-subtitle">${project.categoryLabel}</div>
-      <h2 style="margin-bottom: 0.75rem; font-size: var(--text-3xl);">${project.title}</h2>
+      <h2 style="margin-bottom: 0.75rem; font-size: var(--text-3xl); font-family: var(--font-heading);">${project.title}</h2>
       <p style="color: #cbd5e1; font-size: var(--text-lg); margin-bottom: 1.5rem;">${project.description}</p>
       
       <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
         ${tagsHtml}
       </div>
 
-      <h4 style="margin-bottom: 1rem; color: #ffffff;">Key Features & Architecture:</h4>
+      <h4 style="margin-bottom: 1rem; color: #ffffff; font-family: var(--font-heading);">Key Features & Architecture:</h4>
       <ul class="modal-features-list">
         ${featuresListHtml}
       </ul>
 
       <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
         <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <i class="fas fa-external-link-alt"></i> Launch Live App
+          <i class="fas fa-external-link-alt"></i> Launch Live Demo
         </a>
         <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <i class="fab fa-github"></i> View Source Code
+          <i class="fab fa-github"></i> View GitHub Source
         </a>
       </div>
     `;
@@ -195,7 +227,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
   }
 
-  // Modal Close Handlers
   function closeModal() {
     if (!modalBackdrop) return;
     modalBackdrop.classList.remove('active');
@@ -218,6 +249,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Initial Render
   renderProjects('all');
 });

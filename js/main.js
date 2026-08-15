@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typingTarget) {
     const titles = [
       'Full-Stack Software Engineer',
-      'Senior Web Solutions Architect',
-      'UI/UX & Frontend Developer',
-      'Tech Lead & Creative Coder'
+      'Mobile App Developer (iOS & Android)',
+      'Python & Django Backend Architect',
+      'Digital Marketing & SEO Specialist'
     ];
     let titleIdx = 0;
     let charIdx = 0;
@@ -25,20 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isDeleting) {
         typingTarget.textContent = currentTitle.substring(0, charIdx - 1);
         charIdx--;
-        typeSpeed = 45;
+        typeSpeed = 40;
       } else {
         typingTarget.textContent = currentTitle.substring(0, charIdx + 1);
         charIdx++;
-        typeSpeed = 110;
+        typeSpeed = 100;
       }
 
       if (!isDeleting && charIdx === currentTitle.length) {
         isDeleting = true;
-        typeSpeed = 2200; // Pause at full word
+        typeSpeed = 2200; // Pause at full title
       } else if (isDeleting && charIdx === 0) {
         isDeleting = false;
         titleIdx = (titleIdx + 1) % titles.length;
-        typeSpeed = 400; // Pause before next word
+        typeSpeed = 400; // Pause before next title
       }
 
       setTimeout(typeEffect, typeSpeed);
