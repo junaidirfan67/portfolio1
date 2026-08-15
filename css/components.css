@@ -1,5 +1,5 @@
 /* ==========================================================================
-   JUNAID IRFAN PORTFOLIO - NAVY BLUE CLASSIC COMPONENTS
+   JUNAID IRFAN PORTFOLIO - OVAL PORTRAIT & ICE BLUE COMPONENTS
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -42,19 +42,26 @@
   letter-spacing: 0.02em;
 }
 
+/* Avatar Monogram Logo Badge */
 .logo-badge {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-sm);
-  background: var(--gradient-navy);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--navy-sky);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  font-weight: 800;
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
   box-shadow: var(--shadow-navy-glow);
+  flex-shrink: 0;
+  background: var(--bg-dark-surface);
+}
+
+.logo-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .nav-links {
@@ -168,7 +175,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Buttons & Classic Navy Badges
+   Buttons & Classic Badges
    -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
@@ -190,12 +197,12 @@
   background: var(--gradient-navy);
   color: #ffffff;
   font-weight: 700;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
 }
 
 .btn-outline {
@@ -205,7 +212,7 @@
 }
 
 .btn-outline:hover {
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(56, 189, 248, 0.1);
   border-color: var(--navy-light);
   color: var(--navy-sky);
   transform: translateY(-2px);
@@ -246,7 +253,7 @@
 }
 
 .badge-status {
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(56, 189, 248, 0.1);
   border-color: var(--border-classic);
   color: var(--navy-sky);
 }
@@ -260,7 +267,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Navy Hero Section
+   Oval Profile Portrait Hero Section
    -------------------------------------------------------------------------- */
 .hero {
   min-height: 100vh;
@@ -314,7 +321,7 @@
 
 .hero-bio {
   font-size: var(--text-lg);
-  color: #94a3b8;
+  color: var(--silver-slate);
   margin-bottom: 2.25rem;
   max-width: 620px;
   line-height: 1.8;
@@ -343,7 +350,7 @@
   margin-right: 0.5rem;
 }
 
-/* Navy Profile Portrait Frame */
+/* Oval Capsule Portrait Card Frame */
 .hero-avatar-wrapper {
   position: relative;
   display: flex;
@@ -353,73 +360,76 @@
 
 .hero-avatar-glow {
   position: absolute;
-  width: 105%;
-  height: 105%;
-  border-radius: var(--radius-md);
+  width: 320px;
+  height: 420px;
+  border-radius: var(--radius-oval);
   background: var(--gradient-navy);
-  filter: blur(40px);
-  opacity: 0.25;
+  filter: blur(45px);
+  opacity: 0.28;
   z-index: 1;
 }
 
 .hero-avatar-card {
   position: relative;
   z-index: 2;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-oval);
   overflow: hidden;
   background: var(--bg-card);
-  border: 2px solid var(--navy-light);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
-  padding: 0.6rem;
+  border: 3px solid var(--navy-light);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+  padding: 0.5rem;
+  width: 320px;
+  height: 420px;
+  margin: 0 auto;
 }
 
 .hero-avatar-card img {
-  border-radius: calc(var(--radius-md) - 0.25rem);
+  border-radius: 125px;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
+  height: 100%;
   object-fit: cover;
-  filter: contrast(1.03) brightness(1.02);
+  object-position: center top;
+  filter: contrast(1.04) brightness(1.02);
 }
 
 .floating-experience-badge {
   position: absolute;
-  bottom: -20px;
-  left: -20px;
+  bottom: -15px;
+  left: -15px;
   z-index: 3;
   background: var(--bg-dark-surface);
   border: 1px solid var(--border-classic);
-  padding: 1.1rem 1.35rem;
+  padding: 1rem 1.25rem;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.85rem;
   box-shadow: var(--shadow-classic);
 }
 
 .badge-icon {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-sm);
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(56, 189, 248, 0.15);
   color: var(--navy-sky);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .badge-text-val {
   font-family: var(--font-heading);
   font-weight: 800;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1;
 }
 
 .badge-text-lbl {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--silver-slate);
 }
 
 /* --------------------------------------------------------------------------
@@ -449,7 +459,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 600;
-  color: #94a3b8;
+  color: var(--silver-slate);
   transition: all var(--transition-fast);
   text-align: center;
 }
@@ -457,7 +467,7 @@
 .tab-btn.active {
   background: var(--gradient-navy);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
 }
 
 .tab-pane { display: none; }
@@ -466,7 +476,7 @@
 .about-text {
   font-size: var(--text-base);
   line-height: 1.8;
-  color: #94a3b8;
+  color: var(--silver-slate);
 }
 
 .about-text p { margin-bottom: 1.35rem; }
@@ -561,7 +571,7 @@
 
 .stat-label {
   font-size: var(--text-sm);
-  color: #94a3b8;
+  color: var(--silver-slate);
 }
 
 /* --------------------------------------------------------------------------
@@ -592,7 +602,7 @@
   border-color: transparent;
   color: #ffffff;
   font-weight: 700;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
 }
 
 .skills-grid {
@@ -632,7 +642,7 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
-  background: rgba(59, 130, 246, 0.12);
+  background: rgba(56, 189, 248, 0.12);
   color: var(--navy-sky);
   display: flex;
   align-items: center;
@@ -715,7 +725,7 @@
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(7, 12, 30, 0.85);
+  background: rgba(10, 13, 20, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -751,7 +761,7 @@
 
 .project-description {
   font-size: var(--text-sm);
-  color: #94a3b8;
+  color: var(--silver-slate);
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -768,7 +778,7 @@
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(7, 12, 30, 0.92);
+  background: rgba(10, 13, 20, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 2000;
@@ -880,7 +890,7 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-sm);
-  background: rgba(59, 130, 246, 0.12);
+  background: rgba(56, 189, 248, 0.12);
   color: var(--navy-sky);
   display: flex;
   align-items: center;
@@ -918,7 +928,7 @@
   width: 100%;
   padding: 1rem 1.25rem;
   border-radius: var(--radius-sm);
-  background: rgba(7, 12, 30, 0.7);
+  background: rgba(10, 13, 20, 0.7);
   border: 1px solid var(--border-classic-subtle);
   color: #ffffff;
   transition: all var(--transition-fast);
@@ -926,7 +936,7 @@
 
 .form-input:focus {
   border-color: var(--navy-light);
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
 }
 
 .form-input::placeholder { color: #64748b; }
@@ -980,7 +990,7 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
   opacity: 0;
   pointer-events: none;
   transition: all var(--transition-fast);
@@ -1020,7 +1030,7 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   }
 
   .hero-avatar-wrapper {
-    max-width: 420px;
+    max-width: 360px;
     margin: 0 auto;
   }
 }
@@ -1030,4 +1040,9 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   .mobile-toggle { display: flex; }
   .hero-title-wrapper { font-size: var(--text-xl); }
   .stats-grid { grid-template-columns: 1fr; }
+  .hero-avatar-card,
+  .hero-avatar-glow {
+    width: 280px;
+    height: 370px;
+  }
 }

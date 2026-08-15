@@ -1,5 +1,6 @@
 /* ==========================================================================
-   JUNAID IRFAN PORTFOLIO - NAVY BLUE CLASSIC EXECUTIVE DESIGN SYSTEM
+   JUNAID IRFAN PORTFOLIO - ICE BLUE & CHARCOAL EXECUTIVE DESIGN SYSTEM
+   Matched to Profile Portrait Tones (Suit, Ice Blue Shirt, Charcoal Backdrop)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -8,32 +9,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 
 /* --------------------------------------------------------------------------
-   CSS Custom Properties (Classic Deep Navy Blue Palette)
+   CSS Custom Properties (Graphite Charcoal & Ice Blue Steel Palette)
    -------------------------------------------------------------------------- */
 :root {
-  /* Classic Deep Navy Blue Palette */
-  --bg-dark: #070c1e;              /* Deep Midnight Navy */
-  --bg-dark-surface: #0e1733;      /* Dark Navy Surface */
-  --bg-card: rgba(16, 26, 56, 0.9);/* Classic Navy Glass Card */
-  --bg-card-hover: rgba(22, 36, 76, 0.95);
-  --bg-header: rgba(7, 12, 30, 0.92);
+  /* Charcoal & Ice Blue Palette matched to profile photo */
+  --bg-dark: #0a0d14;              /* Deep Graphite Charcoal */
+  --bg-dark-surface: #111624;      /* Charcoal Slate Surface */
+  --bg-card: rgba(18, 24, 38, 0.92);/* Executive Slate Card */
+  --bg-card-hover: rgba(26, 34, 54, 0.95);
+  --bg-header: rgba(10, 13, 20, 0.94);
 
-  /* Navy Borders & Accents */
-  --border-classic: rgba(59, 130, 246, 0.28);
+  /* Ice Blue & Platinum Steel Borders */
+  --border-classic: rgba(56, 189, 248, 0.28);
   --border-classic-subtle: rgba(255, 255, 255, 0.08);
-  --border-classic-hover: rgba(96, 165, 250, 0.5);
+  --border-classic-hover: rgba(125, 211, 252, 0.55);
 
-  /* Primary Sapphire / Royal Navy Accents */
-  --navy-primary: #1e40af;
-  --navy-light: #3b82f6;
-  --navy-ice: #93c5fd;
-  --navy-sky: #60a5fa;
-  --navy-glow: rgba(59, 130, 246, 0.25);
+  /* Ice Blue & Steel Accents */
+  --navy-primary: #0284c7;
+  --navy-light: #38bdf8;
+  --navy-ice: #bae6fd;
+  --navy-sky: #7dd3fc;
+  --navy-glow: rgba(56, 189, 248, 0.25);
+
+  /* Platinum Silver & Slate Secondary */
+  --silver-light: #f1f5f9;
+  --silver-slate: #94a3b8;
 
   /* Gradients */
-  --gradient-navy: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
-  --gradient-gold-accent: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  --gradient-text: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #93c5fd 100%);
+  --gradient-navy: linear-gradient(135deg, #0284c7 0%, #38bdf8 50%, #7dd3fc 100%);
+  --gradient-silver: linear-gradient(135deg, #64748b 0%, #cbd5e1 100%);
+  --gradient-text: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #7dd3fc 100%);
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -56,11 +61,12 @@
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 18px;
+  --radius-oval: 140px; /* Oval Pill Portrait Frame */
   --radius-full: 9999px;
 
   /* Shadows */
   --shadow-classic: 0 10px 30px -10px rgba(0, 0, 0, 0.65);
-  --shadow-navy-glow: 0 0 25px rgba(59, 130, 246, 0.25);
+  --shadow-navy-glow: 0 0 25px rgba(56, 189, 248, 0.25);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -84,7 +90,7 @@ html {
 
 body {
   background-color: var(--bg-dark);
-  color: #94a3b8;
+  color: var(--silver-slate);
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: 1.7;
@@ -171,7 +177,7 @@ ul { list-style: none; }
   gap: 0.5rem;
   padding: 0.35rem 1.1rem;
   border-radius: var(--radius-full);
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(56, 189, 248, 0.1);
   border: 1px solid var(--border-classic);
   color: var(--navy-sky);
   font-size: var(--text-xs);
@@ -195,14 +201,14 @@ ul { list-style: none; }
 
 .section-description {
   font-size: var(--text-base);
-  color: #94a3b8;
+  color: var(--silver-slate);
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
 ::-webkit-scrollbar-thumb {
-  background: rgba(59, 130, 246, 0.3);
+  background: rgba(56, 189, 248, 0.3);
   border-radius: var(--radius-full);
   border: 2px solid var(--bg-dark);
 }
